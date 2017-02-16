@@ -8,7 +8,7 @@ Nutritionix
 0. Go to [Nutritionix website](https://developer.nutritionix.com) 
 1. Log in or create a new account
 2. Register an application
-2. Go to [Application page](https://developer.nutritionix.com/admin/access_details) to get your application Id and application Keys
+3. Go to [Application page](https://developer.nutritionix.com/admin/access_details) to get your application Id and application Keys
 
 
 ## Nutritionix.getFoodsNutrients
