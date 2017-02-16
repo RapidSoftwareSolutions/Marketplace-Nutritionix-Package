@@ -1,0 +1,174 @@
+{
+  "package": "Nutritionix",
+  "tagline": "Nutritionix API",
+  "description": "Nutritionix",
+  "image": "http:\/\/logo.clearbit.com\/nutritionix.com",
+  "repo": "https:\/\/github.com\/RapidSoftwareSolutions\/Marketplace-Nutritionix-Package",
+  "keywords": [
+  ],
+  "accounts": {
+    "domain": "Nutritionix.com",
+    "credentials": [
+      "applicationId",
+      "applicationSecret"
+    ]
+  },
+  "blocks": [
+    {
+      "name": "getFoodsNutrients",
+      "description": "Returns the nutrients for all foods in request.",
+      "args": [
+        {
+          "name": "applicationId",
+          "type": "credentials",
+          "info": "The application id received from Nutritionix.",
+          "required": true
+        }, {
+          "name": "applicationSecret",
+          "type": "credentials",
+          "info": "The application key received from Nutritionix",
+          "required": true
+        },  {
+          "name": "foodDescription",
+          "type": "String",
+          "info": "Natural language description of the food.",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "error"
+        }
+      ]
+    }, {
+      "name": "getCaloriesBurnedForExercises",
+      "description": "Estimate calories burned for various exercises using natural language.",
+      "args": [
+        {
+          "name": "applicationId",
+          "type": "credentials",
+          "info": "The application id received from Nutritionix.",
+          "required": true
+        }, {
+          "name": "applicationSecret",
+          "type": "credentials",
+          "info": "The application key received from Nutritionix",
+          "required": true
+        },  {
+          "name": "exerciseDescription",
+          "type": "String",
+          "info": "Natural language description of the exercise.",
+          "required": true
+        }, {
+          "name": "userGender",
+          "type": "String",
+          "info": "Gender of the user. Possible values: male or female.",
+          "required": false
+        }, {
+          "name": "userWeight",
+          "type": "String",
+          "info": "Weight of the user in KG",
+          "required": false
+        }, {
+          "name": "userHeight",
+          "type": "String",
+          "info": "Height of the user in CM",
+          "required": false
+        }, {
+          "name": "userAge",
+          "type": "Number",
+          "info": "Age of the user",
+          "required": false
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "error"
+        }
+      ]
+    }, {
+      "name": "searchFoods",
+      "description": "Populate any search interface, including autocomplete, with common foods and branded foods from Nutritionix.",
+      "args": [
+        {
+          "name": "applicationId",
+          "type": "credentials",
+          "info": "The application id received from Nutritionix.",
+          "required": true
+        }, {
+          "name": "applicationSecret",
+          "type": "credentials",
+          "info": "The application key received from Nutritionix",
+          "required": true
+        },  {
+          "name": "foodDescription",
+          "type": "String",
+          "info": "Natural language description of the food.",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "error"
+        }
+      ]
+    }, {
+      "name": "getBrandedFoodById",
+      "description": "Look up the nutrition information for any branded food item.",
+      "args": [
+        {
+          "name": "applicationId",
+          "type": "credentials",
+          "info": "The application id received from Nutritionix.",
+          "required": true
+        }, {
+          "name": "applicationSecret",
+          "type": "credentials",
+          "info": "The application key received from Nutritionix",
+          "required": true
+        },  {
+          "name": "foodId",
+          "type": "String",
+          "info": "Id of the food item.",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "error"
+        }
+      ]
+    }, {
+      "name": "getBrandedFoodByUpc",
+      "description": "Look up the nutrition information for any branded food item.",
+      "args": [
+        {
+          "name": "applicationId",
+          "type": "credentials",
+          "info": "The application id received from Nutritionix.",
+          "required": true
+        }, {
+          "name": "applicationSecret",
+          "type": "credentials",
+          "info": "The application key received from Nutritionix",
+          "required": true
+        },  {
+          "name": "foodUpc",
+          "type": "Number",
+          "info": "Upc of the food item.",
+          "required": true
+        }
+      ],
+      "callbacks": [
+        {
+          "name": "error",
+          "info": "error"
+        }
+      ]
+    }
+  ]
+}
