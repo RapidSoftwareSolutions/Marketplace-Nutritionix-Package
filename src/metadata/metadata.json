@@ -72,7 +72,8 @@
         },
         {
           "name": "userGender",
-          "type": "String",
+          "type": "Select",
+          "options": ["male", "female"],
           "info": "Gender of the user. Possible values: male or female.",
           "required": false
         },
